@@ -1,0 +1,3 @@
+[submodule "poc_springboot_war"]
+	path = poc_springboot_war
+	url = https://github.com/dwchoe/poc_springboot_war.git
