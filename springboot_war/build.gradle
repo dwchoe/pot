@@ -18,15 +18,15 @@ apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'groovy'
-apply plugin: 'aspectj'
+//apply plugin: 'aspectj'
 
 war {
     baseName = 'sandbox_war'
 }
 
-compileAspect {
-    xlint = 'warning'
-}
+//compileAspect {
+//    xlint = 'warning'
+//}
 
 sourceCompatibility = 1.8
 
@@ -51,9 +51,9 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 
     // aspect
-    compile "org.springframework:spring-aop:4.2.6"
-    compile "org.aspectj:aspectjrt:1.8.9"
-    aspectpath "org.aspectj:aspectjtools:1.8.9"
+    //compile "org.springframework:spring-aop:4.2.6"
+    //compile "org.aspectj:aspectjrt:1.8.9"
+    //aspectpath "org.aspectj:aspectjtools:1.8.9"
 }
 
 configurations {
