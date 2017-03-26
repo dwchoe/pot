@@ -1,0 +1,52 @@
+group 'poc_aspectj'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://maven.eveoh.nl/content/repositories/releases"
+        }
+        jcenter()
+    }
+
+    dependencies {
+        classpath "nl.eveoh:gradle-aspectj:1.5"
+    }
+}
+
+project.ext {
+    aspectjVersion = '1.8.6'
+    springVersion = '4.2.3.RELEASE'
+}
+
+
+apply plugin: 'aspectj'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.aspectj:aspectjrt:$aspectjVersion"
+    compile "org.aspectj:aspectjweaver:$aspectjVersion"
+    compile "org.aspectj:aspectjtools:$aspectjVersion"
+
+    aspectpath "org.springframework:spring-aop:$springVersion"
+//    compile "org.springframework:spring-aop:$springVersion"
+    compile "org.springframework:spring-core:$springVersion"
+    compile "org.springframework:spring-context:$springVersion"
+    compile 'org.apache.commons:commons-lang3:3.4'
+
+}
