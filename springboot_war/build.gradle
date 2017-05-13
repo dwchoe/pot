@@ -1,4 +1,4 @@
-group 'sandbox_war'
+group 'springboot'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -21,7 +21,7 @@ apply plugin: 'groovy'
 //apply plugin: 'aspectj'
 
 war {
-    baseName = 'sandbox_war'
+    baseName = 'springboot'
 }
 
 //compileAspect {
