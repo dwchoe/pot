@@ -13,6 +13,10 @@ buildscript {
     }
 }
 
+ext {
+    kafkaVersion = "0.9.0.0"
+}
+
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
@@ -43,6 +47,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf") //View resolver for Spring MVC
     compile("org.springframework.boot:spring-boot-devtools")
 
+    compile("org.apache.kafka:kafka-clients:${kafkaVersion}")
     compile("org.projectlombok:lombok:1.16.0")
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
