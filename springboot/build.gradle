@@ -43,6 +43,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf") //View resolver for Spring MVC
     compile("org.springframework.boot:spring-boot-devtools")
 
+    compile("org.projectlombok:lombok:1.16.0")
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile "org.codehaus.groovy:groovy:2.4.1"
 

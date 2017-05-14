@@ -1,5 +1,7 @@
 package start.controller;
 
+import static start.config.LogConstants.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 
-
+@Slf4j
 @RestController
 public class StockController {
 
@@ -28,11 +30,11 @@ public class StockController {
     @RequestMapping("/stock")
     @ResponseBody
     String echo() {
+        log.debug("op={}, status={}, desc={}", HOME_CONTROLLER, STATUS_KO, "start");
+
+
         return "echo";
     }
-//    String echo() {
-//        return "echo - " + priceService.getPrice() + " - " + stockService.getPrice("BAC");
-//    }
 
 //    @AroundMethod
 //    public String multiply(HttpServletRequest request, @RequestParam @ChangeParam String number) {

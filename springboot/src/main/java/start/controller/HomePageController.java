@@ -1,5 +1,6 @@
 package start.controller;
 
+import static start.config.LogConstants.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,8 @@ public class HomePageController {
     @RequestMapping("/")
     public String homepage(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
+
+        // look up "homepage" template in src/main/resources/templates/homepage.html
         return "homepage";
     }
 }
