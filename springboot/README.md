@@ -1,6 +1,12 @@
 # poc_springboot_war
 
-creating a Spring Boot app without the embedded Tomcat, but a war
+creating a Spring Boot app without the embedded Tomcat, but a war <br>
+- create Groovy service and called from controller
+
+dependencies<br>
+- lombok.jar: allows the use of @Slf4j, @Getter and @Setter <br>
+
+
 
 <b>Step 1:</b><br>
 build.gradle <br>
