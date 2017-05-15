@@ -1,5 +1,8 @@
 package start.service;
 
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -7,7 +10,7 @@ import java.util.Properties;
 /**
  * Created by z0019mz on 5/14/17.
  */
-public class KafkaProducer {
+public class KafkaProducerService {
     public static void main(String[] arg) throws InterruptedException {
         String serializer = "org.apache.kafka.common.serialization.StringSerializer";
         String keystorePassword = "a@t3qhW28E1CXYA%";
