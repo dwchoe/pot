@@ -4,8 +4,8 @@ creating a Spring Boot app without the embedded Tomcat, but a war <br>
 - create Groovy service and called from controller
 
 dependencies<br>
-- lombok.jar: allows the use of @Slf4j, @Getter and @Setter 
--- gradle
+- lombok.jar: allows the use of @Slf4j, @Getter and @Setter
+ - build.gradle: add compile("org.projectlombok:lombok:1.16.0")
 
 
 
