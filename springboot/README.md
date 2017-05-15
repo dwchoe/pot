@@ -5,10 +5,11 @@ description: <br>
 
 features: <br>
 - lombok.jar: allows the use of @Slf4j, @Getter and @Setter
-  - build.gradle: add compile("org.projectlombok:lombok:1.16.0")
+  - build.gradle: compile("org.projectlombok:lombok:1.16.0")
 - create Groovy service and called from controller
 - Kafka producer
   - KafkaProducer.java
+  - build.grade.: compile("org.apache.kafka:kafka-clients:${kafkaVersion}")
 - Kafka consumer
 - servlet filter
 - annotation
