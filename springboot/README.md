@@ -13,6 +13,7 @@ features: <br>
 - Kafka consumer
 - servlet filter
 - annotation
+- aspect
 
 
 <b>Step 1:</b><br>
