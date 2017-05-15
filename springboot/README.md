@@ -1,4 +1,4 @@
-# poc_springboot_war
+# springboot
 
 description: <br>
 - creating a Spring Boot app without the embedded Tomcat, but a war
