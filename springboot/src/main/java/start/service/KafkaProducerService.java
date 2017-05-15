@@ -13,15 +13,15 @@ import java.util.Properties;
 public class KafkaProducerService {
     public static void main(String[] arg) throws InterruptedException {
         String serializer = "org.apache.kafka.common.serialization.StringSerializer";
-        String keystorePassword = "a@t3qhW28E1CXYA%";
+        String keystorePassword = "password";
         Properties props = new Properties();
-        props.put("bootstrap.servers", "ttcesvlx1052.target.com:9093");
+        props.put("bootstrap.servers", "hostname:port");
         props.put("acks", "all");
         props.put("retries", Integer.valueOf(0));
         props.put("batch.size", Integer.valueOf(16384));
         props.put("linger.ms", Integer.valueOf(1));
         props.put("buffer.memory", Integer.valueOf(33554432));
-        props.put("client.id", "test-SimpleProducerSSL-1");
+        props.put("client.id", "test-producer");
         props.put("key.serializer", serializer);
         props.put("value.serializer", serializer);
         props.put("security.protocol", "SSL");
@@ -32,7 +32,7 @@ public class KafkaProducerService {
         props.put("ssl.keystore.password", keystorePassword);
         Date curDate = new Date();
         new SimpleDateFormat();
-        String topic = "egs-profile-uat-app-supermario";
+        String topic = "topic_name";
         SimpleDateFormat format = new SimpleDateFormat("dd-M-yyyy hh:mm:ssss");
         String dateToStr = format.format(curDate);
         KafkaProducer producer = new KafkaProducer(props);
@@ -52,15 +52,15 @@ public class KafkaProducerService {
 
     public void sendMessage(String topic) {
         String serializer = "org.apache.kafka.common.serialization.StringSerializer";
-        String keystorePassword = "a@t3qhW28E1CXYA%";
+        String keystorePassword = "password";
         Properties props = new Properties();
-        props.put("bootstrap.servers", "ttcesvlx1052.target.com:9093");
+        props.put("bootstrap.servers", "hostname:port");
         props.put("acks", "all");
         props.put("retries", Integer.valueOf(0));
         props.put("batch.size", Integer.valueOf(16384));
         props.put("linger.ms", Integer.valueOf(1));
         props.put("buffer.memory", Integer.valueOf(33554432));
-        props.put("client.id", "test-SimpleProducerSSL-1");
+        props.put("client.id", "test-producer");
         props.put("key.serializer", serializer);
         props.put("value.serializer", serializer);
         props.put("security.protocol", "SSL");

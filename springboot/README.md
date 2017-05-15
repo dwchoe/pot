@@ -9,7 +9,7 @@ features: <br>
 - create Groovy service and called from controller
 - Kafka producer
   - KafkaProducer.java
-  - build.grade.: compile("org.apache.kafka:kafka-clients:${kafkaVersion}")
+  - build.grade.: compile("org.apache.kafka:kafka-clients:0.9.0.0")
 - Kafka consumer
 - servlet filter
 - annotation
