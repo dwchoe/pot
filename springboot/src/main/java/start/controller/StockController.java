@@ -31,7 +31,7 @@ public class StockController {
     @RequestMapping("/stock")
     @ResponseBody
     String echo() {
-        log.debug("op={}, status={}, desc={}", HOME_CONTROLLER, STATUS_KO, "start");
+//        log.debug("op={}, status={}, desc={}", HOME_CONTROLLER, STATUS_KO, "start");
 
 //        outputService.write();
         return "echo";
