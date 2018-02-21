@@ -51,3 +51,9 @@ build.gradle <br>
   }
  }
 </pre>
+
+<pre>
+Advice Annotation
+@AppRequest
+@AppResponse
+</pre>
