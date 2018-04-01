@@ -2,6 +2,9 @@ group 'pot_java_dao'
 version '1.0-SNAPSHOT'
 
 buildscript {
+    ext {
+        springBootVersion = '1.4.2.RELEASE'
+    }
     repositories {
         mavenCentral()
     }
@@ -14,14 +17,20 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile "org.springframework.boot:spring-boot-starter:2.0.0.RELEASE"
-    compile "org.springframework.boot:spring-boot-autoconfigure:2.0.0.RELEASE"
-    compile "org.springframework:spring-jdbc:5.0.4.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
+    compile "org.projectlombok:lombok:1.16.14"
+    compile "org.slf4j:slf4j-api:1.7.5"
+
+    runtime "org.postgresql:postgresql:9.4.1212.jre7"
+
     testCompile "junit:junit:4.12"
 }
